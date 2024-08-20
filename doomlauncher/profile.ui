@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>profile_dialog</class>
+ <widget class="QWidget" name="profile_dialog">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>437</width>
+    <height>474</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>8</y>
+     <width>411</width>
+     <height>461</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <item row="1" column="0">
+     <widget class="QComboBox" name="profile_iwad"/>
+    </item>
+    <item row="1" column="1">
+     <widget class="QComboBox" name="profile_port"/>
+    </item>
+    <item row="1" column="2">
+     <widget class="QComboBox" name="profile_compat"/>
+    </item>
+    <item row="2" column="0" colspan="3">
+     <widget class="QListView" name="profile_wadlist">
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="profile_wad_add">
+      <property name="text">
+       <string>ADD</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QPushButton" name="profile_wad_remove">
+      <property name="text">
+       <string>REMOVE</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" colspan="3">
+     <widget class="QPlainTextEdit" name="profile_config">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>500</width>
+        <height>75</height>
+       </size>
+      </property>
+      <property name="backgroundVisible">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QPushButton" name="profile_save">
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="3">
+     <widget class="QLineEdit" name="profile_name">
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>profile_name</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>profile_dialog</receiver>
+   <slot>setWindowTitle(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>313</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>360</x>
+     <y>53</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>profile_wad_add</sender>
+   <signal>clicked()</signal>
+   <receiver>profile_dialog</receiver>
+   <slot>addWAD()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>128</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>profile_wad_remove</sender>
+   <signal>clicked()</signal>
+   <receiver>profile_dialog</receiver>
+   <slot>removeWAD()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>315</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>353</x>
+     <y>331</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>profile_save</sender>
+   <signal>clicked()</signal>
+   <receiver>profile_dialog</receiver>
+   <slot>saveProfile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>392</x>
+     <y>399</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>441</x>
+     <y>380</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>addWAD()</slot>
+  <slot>removeWAD()</slot>
+  <slot>saveProfile()</slot>
+ </slots>
+</ui>

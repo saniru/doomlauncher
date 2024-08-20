@@ -1,0 +1,15 @@
+{
+    "wad_dirs":[],
+    "iwads":
+    [
+        "/usr/share/doom/DOOM2.WAD",
+        "/usr/share/doom/freedoom1.wad",
+        "/usr/share/doom/freedoom2.wad",
+        "/usr/share/doom/HERETIC.WAD",
+        "/usr/share/doom/HEXEN.WAD",
+        "/usr/share/doom/doom.wad",
+        "/usr/share/doom/PLUTONIA.WAD",
+        "/usr/share/doom/TNT.WAD",
+        "/usr/share/doom/doom_complete.pk3"
+    ]
+}

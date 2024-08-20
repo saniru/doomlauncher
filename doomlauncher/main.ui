@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>993</width>
+    <height>755</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>90</y>
+      <width>381</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_5">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Current Profile</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>373</width>
+            <height>447</height>
+           </rect>
+          </property>
+          <widget class="QTextBrowser" name="profileinfo">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>230</y>
+             <width>381</width>
+             <height>231</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="titlepic">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>381</width>
+             <height>231</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="0">
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="play">
+         <property name="text">
+          <string>PLAY</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="portedit">
+         <property name="text">
+          <string>Edit Ports</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="generateshortcut">
+         <property name="text">
+          <string>Make shortcut</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>51</x>
+      <y>90</y>
+      <width>431</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Profiles</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="2">
+        <widget class="QPushButton" name="remove">
+         <property name="text">
+          <string>Remove</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="create">
+         <property name="text">
+          <string>Create</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="edit">
+         <property name="text">
+          <string>Edit</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="0">
+      <widget class="QListView" name="profilelist"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>create</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>createProfile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>113</x>
+     <y>625</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>103</x>
+     <y>683</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edit</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>editProfile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>312</x>
+     <y>624</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>312</x>
+     <y>671</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>remove</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>deleteProfile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>438</x>
+     <y>619</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>436</x>
+     <y>680</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>play</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>startGame()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>588</x>
+     <y>618</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>589</x>
+     <y>678</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>generateshortcut</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>makeShortcut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>832</x>
+     <y>620</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>831</x>
+     <y>674</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>portedit</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>editPorts()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>712</x>
+     <y>618</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>704</x>
+     <y>695</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>profilelist</sender>
+   <signal>indexesMoved(QModelIndexList)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateProfile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>266</x>
+     <y>366</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>496</x>
+     <y>377</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>createProfile()</slot>
+  <slot>editProfile()</slot>
+  <slot>renameProfile()</slot>
+  <slot>deleteProfile()</slot>
+  <slot>startGame()</slot>
+  <slot>makeShortcut()</slot>
+  <slot>updateProfile()</slot>
+  <slot>editPorts()</slot>
+ </slots>
+</ui>
