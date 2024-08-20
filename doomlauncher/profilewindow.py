@@ -80,9 +80,9 @@ class ProfileWindow(QtWidgets.QMainWindow):
         config = self.profile_config.toPlainText()
 
         if self.updating:
-            portc.execute("UPDATE Profiles SET Name = ?, IWAD = ?, PWADS = ?"
-                          ", Port = ?, Compatibility = ?,Config = ?"
-                          ",Playtime = ?  WHERE ID = ?;",
+            portc.execute("UPDATE Profiles SET name = ?, iwad = ?, pwads = ?"
+                          ", port = ?, compat = ?,config = ?"
+                          ",playtime = ?  WHERE rowid = ?;",
                           (name,
                            iwad,
                            wad_list,
